@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './content/header/header';
+import Footer from './content/footer/footer';
+import Main from './content/main/main';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      index: 0
+    }
+  }
+
+  updateIndex(index) {
+    this.setState({index});
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header index={this.state.index} updateIndex={(ind) => this.updateIndex(ind)} />
+        <Main index={this.state.index} updateIndex={(ind) => this.updateIndex(ind)} />
+        <Footer />
       </div>
     );
   }

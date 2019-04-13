@@ -1,0 +1,11 @@
+@import './header.scss';
+@import './main/main.scss';
+@import './main/sidebar.scss';
+@import './footer.scss';
+@import './main/content/messagebox.scss';
+
+.app {
+  height: 768px;
+  width: 100%;
+}
+

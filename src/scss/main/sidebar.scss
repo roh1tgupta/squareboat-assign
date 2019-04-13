@@ -1,0 +1,70 @@
+$fontcolor: rgb(150, 148, 148);
+$fontcolorbold: rgb(109, 108, 108);
+.sidebar-content {
+    padding: 30px 70px;
+    .image {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      padding: 10px 0;
+    }
+  }
+
+  .user_name {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .status {
+    font-size: 0.7rem;
+    color: $fontcolor;
+    padding: 5px 0px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+.info {
+  text-align: center;
+  .logo {
+    svg {
+      fill: pink;
+    }
+  }
+}
+
+.menu{
+  margin-top: 20px;
+  .menuitemsHeading {
+    padding: 5px 5px;
+    margin-top: 7%;
+    background: white;
+    border-radius: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    span {
+      padding: 0 10px;
+    }
+    .item-name{
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+  }
+  .selectedItem {
+    color: white;
+    svg {
+      fill: white;
+    }
+    background: #e4537e;
+  }
+  .subitems {
+    color: $fontcolor;
+   .subitemslist{
+    font-weight: 800;
+    font-size: 0.7rem;
+    padding: 0 30%;
+    padding-top: 7%;
+   } 
+   .selectedSub {
+    color: #e4537e;
+   }
+  }
+}

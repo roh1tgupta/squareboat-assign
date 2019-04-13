@@ -1,0 +1,19 @@
+.main{
+  min-height: 100%;
+  width: 100%;
+  background-color:rgb(243, 241, 241);
+  display: flex;
+}
+
+.sidebar{
+  flex: 1;
+  //float: left;
+}
+
+.content {
+  flex: 3;
+  .noContent {
+    text-align: center;
+    padding-top: 25%;
+  }
+}

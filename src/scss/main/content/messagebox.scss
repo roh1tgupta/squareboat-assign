@@ -1,0 +1,341 @@
+@import '../utils.scss';
+
+$fontcolor: rgb(150, 148, 148);
+$fontcolorbold: rgb(109, 108, 108);
+.messageBox {
+  .upperSection {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    display: flex;
+    .leftSection{
+      flex: 1;
+      
+      .text{
+        font-size: 1.7rem;
+        font-weight: 500;
+        padding-left: 10px;
+      }
+    }
+    .rightSection {
+      text-align: right;
+      padding-right: 40px;
+      flex:1;
+    }
+  }
+
+  .chatbox{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1%;
+    background: white;;
+    margin-right: 40px;
+    display: flex;
+    padding-bottom: 5px;
+    .leftSection {
+      border-right: 1px solid rgb(214, 214, 214);
+      flex: 1;
+      .upper {
+        display: flex;
+        padding: 10px 10px;
+        border-bottom: 1px solid rgb(214, 214, 214);
+        .left {
+          flex: 1;
+          color: $fontcolorbold;
+          font-weight: 500;
+          font-size: 16px;
+        }
+        .right {
+          text-align: right;
+          flex: 1;
+          color: $fontcolorbold;
+          font-size: 16px;
+        }
+      }
+
+      .contactList {
+        .contactGroup {
+          background: rgb(248, 248, 248);
+          .name {
+            color: $fontcolorbold;
+          }
+          .underline {
+            border-bottom: 1px solid rgb(214, 214, 214);
+            margin: 0px 6px;
+          }
+        }
+
+        .selected {
+          background: rgb(253, 239, 242);//rgb(248, 214, 220);
+          .name {
+            color: #c45173;
+          }
+          .underline {
+            border-bottom: 1px solid rgb(255, 116, 139);
+            margin: 0px 6px;
+          }
+        }
+        .contactList-upper {
+          padding-bottom: 5px;
+          .image {
+            float: left;
+            padding: 0px  10px;
+            padding-top: 15px;
+            .contactList-img {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+            }
+          }
+          
+          .contactList-name-message {
+            padding: 15px 0px;
+            .name {
+              padding-top: 5px;
+              font-weight: 650;
+            }
+            .lastMessage {
+              font-size: 0.7rem;
+              padding-top: 5px;
+              color: $fontcolorbold;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .contactList-info{
+          padding-bottom: 5px;
+          display: flex;
+          .info-left {
+            flex: 1;
+            padding-left: 3px;
+            font-size: 0.6rem;
+            color: $fontcolor;
+          }
+          .info-right {
+            flex: 1;
+            text-align: right;
+            font-size: 0.6rem;
+            .reply-info {
+              display: inline;
+              padding-right: 5px;
+              border-right: 1px solid rgb(214, 214, 214);
+              color: $fontcolorbold;
+              .watchingicon {
+                height: 0.7rem;
+                width: 0.7rem; 
+                padding-right: 3px;
+              }
+            }
+
+            .report-info {
+              display: inline;
+              padding-right: 5px;
+              padding-left: 5px;
+              .reports {
+                font-size: 0.6rem;
+              }
+              .reportImg {
+                height: 0.6rem;
+                width: 0.6rem;
+                padding-right: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .rightSection {
+      flex: 2;
+      .upper {
+        position: relative;
+        padding: 10px 0px;
+        border-bottom: 1px solid rgb(214, 214, 214);
+        
+        .replyText{
+          padding-left: 5px;
+          color: $fontcolorbold;
+          font-weight: 500;
+        }
+        .reply {
+          display: inline;
+          padding: 0px 4%;
+          font-size: 16px;
+          color: pink;
+          svg {
+            width: 16px;
+            height: 16px;
+            //fill: pink;
+          }
+          .replyText {
+            color: black;
+          }
+        }
+        .report{
+          display: inline;
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .chatHistory {
+        position: relative;
+        height: calc(100% - 36px);
+        .chatDate{
+          position: absolute;
+          margin-top: 3px;
+          right: 50%;
+          z-index: 0;
+          color: $fontcolor;
+          font-size: 0.8rem;
+          text-shadow: 1px 1px #cacaca;
+        //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .historySection {
+          position: absolute;
+          width: 100%;
+          bottom: 15%;
+          max-height: 80%;
+          z-index: 0;
+          overflow: auto;
+          .sent {
+            text-align: right;
+            margin-right: 10%;
+            .chatmessage {
+              font-size: 0.8rem;
+              padding: 5px;
+              background: pink;
+              border-radius: 20%;
+            }
+            .chatimg{
+              height: 5rem;
+              width: 5rem;
+            }
+            .messagetime{
+              font-size: 0.5rem;  
+              padding-top: 10px;
+            }
+          }
+
+          .received {
+            text-align: left;
+            margin-left: 10%;
+            .chatmessage {
+              font-size: 0.8rem;
+              padding: 5px;
+              background: pink;
+              border-radius: 20%;
+            }
+            .messagetime{
+              font-size: 0.5rem; 
+              padding-top: 10px; 
+            }
+          }
+        }
+
+        .historyimg {
+          position: relative;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+        }
+
+        .mine {
+          float: right;
+          margin-right: 2%;
+        }
+
+        .friends {
+          margin-left: 2%;
+        }
+        .inputBox{
+          position: absolute;
+          bottom: 0%;
+          height: 12%;
+          z-index: 99999;
+          border-top: 1px solid grey;
+          width: 100%;
+          .pluscircle{
+            float: left;
+            margin: 2%;
+            color: white;
+            
+            .plusCircleNotActive {
+              svg {
+                height: 35px;
+                width: 35px;
+                fill: #e4537e;
+              }
+            }
+            .plusCircleActive {
+              svg {
+                height: 35px;
+                width: 35px;
+                fill: #e4537e;
+                transform: rotate(-45deg);
+                transition: transform 1s;
+              }
+              .animation {
+                position: absolute;
+                bottom: 100%;
+                padding: 10px;
+                border-radius: 5%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+                .animationItem {
+                  display: inline;
+                  padding: 10px;
+                  color: grey;
+                  .name {
+                    padding: 0 5px;
+                  }
+                  :hover {
+                    color: black;
+                  }
+                }
+               }
+            }
+          }
+          
+          .inputtext {
+            margin: 2% 0%;
+            height: 35px;
+            width: calc(100% - 180px);
+            border: none;
+            :focus {
+              border:none;
+            }
+          }
+          textarea:focus, input:focus{
+            outline: none;
+            border: none;
+          }
+          .sendButton {
+            margin: 2%;
+            border-radius: 10%;
+            padding: 1% 2%;
+            float: right;
+            color: white;
+            background-color:#e4537e;
+            :focus {
+              border: none;
+            }
+            svg {
+              height: 16px;
+              width: 16px;
+              fill: white;
+            }
+            .sendText {
+              float: right;
+              padding-left: 5px;
+              padding-top: 2px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

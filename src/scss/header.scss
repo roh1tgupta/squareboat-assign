@@ -1,0 +1,91 @@
+
+.header {
+  display: flex;
+  padding-top: 15px;
+  .logo {
+    flex: 1;
+    padding-bottom: 10px;  
+    .heart {
+      fill: pink;
+      padding-left: 50px;
+    }
+    .logo-text {
+      padding-left: 5px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #e4537e;//rgb(240, 149, 198)
+    }
+ 
+
+  }
+  
+  .nav {
+    flex: 2;
+    text-align: center;
+  
+    .navigationItem {
+      display: inline;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      .itemName {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: 500;
+      }
+    }
+  
+    .selected {
+      color: #e4537e;
+      border-bottom: 2px solid #e4537e;
+      svg {
+        fill: #e4537e;
+      }    
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      animation-duration: 2s;
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    
+    @keyframes fadeIn {
+      0% {opacity: 0.1;}
+      100% {opacity: 1;}
+    }
+    
+    
+  }
+  
+  .accountDetail {
+    flex: 1;
+    .floatright { 
+      float: right;
+      padding-right: 20px;
+      .account-item {
+        display: inline;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .notification, .help {
+        :hover {
+          color: #e4537e;
+        }
+      }
+    }
+      .image { 
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+      }
+      .header-username {
+        padding-left: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    
+  }
+}
